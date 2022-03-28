@@ -1,4 +1,4 @@
-# 结果JSON定义（第2版）
+# 结果JSON定义（第3版）
 
 参考 [jazzband/geojson: Python bindings and utilities for GeoJSON (github.com)](https://github.com/jazzband/geojson) 的结果，通过GeoJSON的properties结果传递参数。
 
