@@ -95,7 +95,7 @@ Feature[Point] 表示每一个点
 
 ## 样例
 
-以下这个例子返回的是整个QueryResponse本身。
+以下这个例子返回的是整个QueryResponse本身。GeoJSON结果的列表请见下方。
 
 ```json
 {
