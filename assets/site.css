@@ -159,8 +159,16 @@ h3 {
   line-height: 0;
 }
 
+.project + .project {
+  margin-top: 3rem;
+}
+
 .project figure {
   margin: 1.75rem 0;
+}
+
+.project figure a {
+  display: block;
 }
 
 .project figure img {
