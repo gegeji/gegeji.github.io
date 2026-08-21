@@ -68,9 +68,11 @@
       <section aria-labelledby="publications-title">
         <h2 id="publications-title">Publications</h2>
 
+        <p class="authors-note"><sup>†</sup> equal contribution (co-first authors) · <sup>*</sup> corresponding author</p>
+
         <article class="publication">
           <h3>E2E: Efficient Filtered AKNN Search via Adaptive Termination</h3>
-          <p><strong>Wenxuan Xia</strong>, Mingyu Yang, Wentao Li, Wei Wang.</p>
+          <p><strong>Wenxuan Xia</strong><sup>†</sup>, Mingyu Yang<sup>†*</sup>, Wentao Li, Wei Wang<sup>*</sup>.</p>
           <p><em>ACM SIGKDD Conference on Knowledge Discovery and Data Mining</em>, 2026.</p>
           <p class="item-links">
             <a href="https://doi.org/10.1145/3770855.3817860" rel="external">DOI</a>
@@ -81,7 +83,7 @@
 
         <article class="publication">
           <h3>Elastic Index Selection for Label-Hybrid AKNN Search</h3>
-          <p>Mingyu Yang, <strong>Wenxuan Xia</strong>, Wentao Li, Raymond Chi-Wing Wong, Wei Wang.</p>
+          <p>Mingyu Yang, <strong>Wenxuan Xia</strong>, Wentao Li, Raymond Chi-Wing Wong, Wei Wang<sup>*</sup>.</p>
           <p><em>Proceedings of the VLDB Endowment</em>, 19(4): 617–630, VLDB 2026.</p>
           <p class="item-links">
             <a href="https://doi.org/10.14778/3785297.3785304" rel="external">DOI</a>
@@ -108,15 +110,85 @@
           <h3>My private NanoClaw</h3>
           <p>
             I maintain a private fork of
-            <a href="https://github.com/nanocoai/nanoclaw" rel="external">NanoClaw</a>
-            as a personal assistant that I use day to day. I adapt it around my own routines.
-            I use it to keep and revisit notes from conversations, turn books and articles into
-            structured courses, save vocabulary while I read for later review, and return interactive
-            components such as maps when a text reply is not enough.
+            <a href="https://github.com/nanocoai/nanoclaw" rel="external">NanoClaw</a>:
+            an always-on agent harness that runs Claude- and Codex-style agents behind Telegram
+            and other channels. I started it when OpenClaw was first taking off — before
+            "agent harness" had become a common name for this kind of system — so it naturally
+            belongs to the same family as the many harnesses that have appeared since. The goal
+            was never to build yet another general-purpose harness with better benchmark numbers.
+            What I care about is fitting this one to needs of my own that off-the-shelf
+            assistants don't cover:
           </p>
+          <ul>
+            <li>
+              <strong>Journaling.</strong> A diary pipeline where the language model itself performs
+              named-entity recognition over entries, so day-to-day notes accumulate into a
+              queryable record of people, places, and events.
+            </li>
+            <li>
+              <strong>Replies worth reading.</strong> Channel replies go beyond plain text:
+              messages use Telegram's native formatting, an audio model lets the agent hear
+              voice notes and speak back, and it can generate an image and send it when a
+              picture answers better.
+            </li>
+            <li>
+              <strong>A visualization component.</strong> The agent can draw explanatory diagrams
+              and ship interactive pages instead of describing things in words — the map below was
+              produced this way.
+            </li>
+            <li>
+              <strong>Textbooks as interactive courses.</strong> University textbooks and other long
+              material are turned into courses that run as ongoing, interactive conversations.
+            </li>
+          </ul>
+          <p>
+            The project is also an experiment on itself: how to develop and operate a large,
+            fast-moving codebase in the age of AI engineering. The harness carries its own
+            workflow guards, design-doc discipline, and an operator desk for observability —
+            the usage ledger below is one of its panels.
+          </p>
+
+          <figure>
+            <img
+              src="assets/images/nanoclaw-olle7-widget.png"
+              alt="Interactive map widget for Jeju Olle Trail Route 7, with an official route overview, a Mapbox map showing verified stops and coffee detours, and a scrollable stop list."
+              width="1400" height="1433" loading="lazy"
+            >
+            <figcaption>
+              An interactive map the agent built while planning a Jeju trip: Olle Trail Route 7,
+              with independently verified stops and coffee detours, and the official route shown
+              for reference. Rendered by the harness's widget component.
+            </figcaption>
+          </figure>
+
+          <figure class="portrait">
+            <img
+              src="assets/images/nanoclaw-art-course.jpg"
+              alt="A Telegram channel named Art Introduction showing lesson 8 of an art-appreciation course, reading Night-Shining White (attributed to Han Gan) with a layered analysis of the painting."
+              width="720" height="1296" loading="lazy"
+            >
+            <figcaption>
+              One lesson of an art-introduction course the agent teaches in Telegram, built from
+              textbook material — here, reading <em>Night-Shining White</em>, attributed to Han Gan.
+            </figcaption>
+          </figure>
+
+          <figure>
+            <img
+              src="assets/images/nanoclaw-usage-ledger.png"
+              alt="NanoClaw operator desk usage page with daily, weekly, monthly, and cumulative token totals, a per-channel monthly usage chart, and a per-channel accounting table."
+              width="1600" height="864" loading="lazy"
+            >
+            <figcaption>
+              The operator desk's usage ledger: per-channel token and cost accounting for every
+              agent in the system.
+            </figcaption>
+          </figure>
+
           <p class="project-note">
-            The repository remains private because its history includes personal configuration and data.
-            Any examples published here will come from real runs with the personal details removed.
+            The repository stays private because personal data remains in its history, and the
+            journal pages are not shown because they name real people. The screenshots above are
+            real, unstaged output from my running instance.
           </p>
         </article>
       </section>
