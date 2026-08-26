@@ -180,8 +180,14 @@ h3 {
 }
 
 .project figure.portrait img {
-  width: min(100%, 360px);
+  width: min(100%, 320px);
   margin: 0 auto;
+}
+
+.project figure.portrait figcaption {
+  width: min(100%, 320px);
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .project figcaption {
